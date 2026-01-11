@@ -1,4 +1,6 @@
-/* RESET */
+/* ===============================
+   RESET
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +8,29 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* THEME COLORS */
+/* ===============================
+   THEME COLORS
+================================ */
 :root {
   --bg-dark: #0f172a;
   --bg-card: #020617;
   --text-main: #e5e7eb;
   --text-muted: #94a3b8;
-  --accent: #14b8a6; /* teal */
+  --accent: #14b8a6;
 }
 
-/* BODY */
+/* ===============================
+   BODY
+================================ */
 body {
   background-color: var(--bg-dark);
   color: var(--text-main);
   min-height: 100vh;
 }
 
-/* NAVBAR */
+/* ===============================
+   NAVBAR
+================================ */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -55,7 +63,9 @@ body {
   color: var(--accent);
 }
 
-/* HERO */
+/* ===============================
+   HERO SECTION
+================================ */
 .hero {
   max-width: 900px;
   margin: 120px auto;
@@ -79,7 +89,9 @@ body {
   line-height: 1.7;
 }
 
-/* BUTTONS */
+/* ===============================
+   BUTTONS
+================================ */
 .hero-buttons {
   margin-top: 40px;
   display: flex;
@@ -114,7 +126,14 @@ body {
   color: #020617;
 }
 
-/* SECTION HEADINGS */
+.btn.small {
+  font-size: 0.8rem;
+  padding: 8px 18px;
+}
+
+/* ===============================
+   PROJECTS PAGE
+================================ */
 .projects-section {
   max-width: 1100px;
   margin: 100px auto;
@@ -133,14 +152,12 @@ body {
   margin-bottom: 60px;
 }
 
-/* PROJECT GRID */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
-/* PROJECT CARD */
 .project-card {
   background-color: var(--bg-card);
   padding: 28px;
@@ -155,7 +172,7 @@ body {
 
 .project-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .project-card p {
@@ -175,14 +192,60 @@ body {
 
 .tags span {
   font-size: 0.75rem;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 20px;
   background-color: rgba(20, 184, 166, 0.15);
   color: var(--accent);
 }
 
-/* SMALL BUTTON */
-.btn.small {
-  font-size: 0.8rem;
-  padding: 8px 18px;
+/* ===============================
+   PROJECT DETAIL PAGE (FIXED)
+================================ */
+.project-detail {
+  max-width: 900px;
+  margin: 120px auto;
+  padding: 0 24px;
+}
+
+.project-detail h1 {
+  font-size: 2.6rem;
+  margin-bottom: 14px;
+}
+
+.project-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 55px;
+  line-height: 1.8;
+}
+
+.detail-block {
+  margin-bottom: 60px;
+}
+
+.detail-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  color: var(--accent);
+}
+
+.detail-block p {
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+}
+
+.detail-block ul {
+  padding-left: 22px;
+  margin-top: 12px;
+}
+
+.detail-block li {
+  margin-bottom: 12px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.project-detail .btn {
+  margin-top: 30px;
 }
