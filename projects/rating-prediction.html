@@ -1,127 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Restaurant Rating Prediction | Vishal Akale</title>
+/* ===============================
+   PROJECT DETAIL PAGE
+================================ */
 
-  <!-- Global styles -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- Project detail specific styles -->
-  <link rel="stylesheet" href="../assets/css/project-detail.css">
-</head>
+.project-detail {
+  max-width: 900px;
+  margin: 140px auto;
+  padding: 0 24px;
+}
 
-<body>
+/* MAIN TITLE */
+.project-detail h1 {
+  font-size: 2.7rem;
+  margin-bottom: 18px;
+}
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">Vishal Akale</div>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../projects.html" class="active">Projects</a></li>
-      <li><a href="../skills.html">Skills</a></li>
-      <li><a href="../experience.html">Experience</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-  </nav>
+/* SUBTITLE */
+.project-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  margin-bottom: 60px;
+  line-height: 1.9;
+}
 
-  <!-- PROJECT DETAIL -->
-  <section class="project-detail">
+/* SECTION BLOCK */
+.detail-block {
+  margin-bottom: 70px;
+}
 
-    <h1>Restaurant Rating Prediction System</h1>
+/* SECTION HEADINGS */
+.detail-block h2 {
+  font-size: 1.55rem;
+  margin-bottom: 20px;
+  color: #14b8a6;
+}
 
-    <p class="project-subtitle">
-      End-to-end machine learning system developed to predict restaurant ratings
-      based on city and cuisine type.
-    </p>
+/* PARAGRAPH TEXT */
+.detail-block p {
+  font-size: 1rem;
+  line-height: 2;
+  color: #94a3b8;
+}
 
-    <!-- OVERVIEW -->
-    <div class="detail-block">
-      <h2>Project Overview</h2>
-      <p>
-        This project focuses on building a complete machine learning pipeline
-        to predict restaurant ratings using historical data. It covers data
-        preprocessing, model training, and deployment through a Flask-based
-        web application.
-      </p>
-    </div>
+/* ===============================
+   BULLET LISTS (FIXED & VISIBLE)
+================================ */
 
-    <!-- KEY HIGHLIGHTS -->
-    <div class="detail-block">
-      <h2>Key Highlights</h2>
-      <ul class="highlight-list">
-        <li>Developed an end-to-end ML pipeline from raw data to deployment</li>
-        <li>Handled categorical feature encoding for city and cuisine</li>
-        <li>Integrated trained ML model with a Flask backend</li>
-        <li>Implemented input validation for reliable predictions</li>
-        <li>Designed a clean interface for real-time usage</li>
-      </ul>
-    </div>
+.highlight-list,
+.workflow-list {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
 
-    <!-- PROBLEM -->
-    <div class="detail-block">
-      <h2>Problem Statement</h2>
-      <p>
-        Restaurant ratings depend on multiple factors such as location and cuisine.
-        Manual estimation of ratings is subjective and inconsistent. This project
-        aims to automate the prediction process using machine learning to deliver
-        consistent and data-driven results.
-      </p>
-    </div>
+.highlight-list li,
+.workflow-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.98rem;
+  line-height: 1.9;
+  color: #94a3b8;
+}
 
-    <!-- APPROACH -->
-    <div class="detail-block">
-      <h2>Approach & Methodology</h2>
-      <ul>
-        <li>Cleaned and preprocessed data using Pandas and NumPy</li>
-        <li>Encoded categorical features such as city and cuisine</li>
-        <li>Trained and evaluated machine learning models</li>
-        <li>Exported the trained model for inference</li>
-        <li>Built a Flask web application for real-time predictions</li>
-      </ul>
-    </div>
+/* GREEN CHECK ICON */
+.highlight-list li::before,
+.workflow-list li::before {
+  content: "✔";
+  color: #14b8a6;
+  font-size: 1rem;
+  margin-top: 2px;
+}
 
-    <!-- WORKFLOW -->
-    <div class="detail-block">
-      <h2>System Workflow</h2>
-      <ul class="workflow-list">
-        <li>Data Collection → Raw restaurant dataset</li>
-        <li>Data Preprocessing → Cleaning & encoding</li>
-        <li>Model Training → Machine learning model development</li>
-        <li>Model Export → Saved for inference</li>
-        <li>Deployment → Flask-based web application</li>
-      </ul>
-    </div>
+/* ===============================
+   TECHNOLOGY TAGS
+================================ */
 
-    <!-- TECH STACK -->
-    <div class="detail-block">
-      <h2>Technologies Used</h2>
-      <div class="tags">
-        <span>Python</span>
-        <span>Pandas</span>
-        <span>NumPy</span>
-        <span>Scikit-learn</span>
-        <span>Flask</span>
-        <span>HTML</span>
-        <span>CSS</span>
-      </div>
-    </div>
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
 
-    <!-- OUTCOME -->
-    <div class="detail-block">
-      <h2>Outcome & Learnings</h2>
-      <p>
-        The system successfully predicts restaurant ratings based on user inputs.
-        This project strengthened my understanding of machine learning workflows,
-        feature engineering, and deploying ML models as production-ready web
-        applications.
-      </p>
-    </div>
+.tags span {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background-color: rgba(20, 184, 166, 0.18);
+  color: #14b8a6;
+}
 
-    <!-- BACK -->
-    <a href="../projects.html" class="btn secondary">← Back to Projects</a>
-
-  </section>
-
-</body>
-</html>
+/* BACK BUTTON */
+.project-detail .btn {
+  margin-top: 40px;
+}
