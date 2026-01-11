@@ -1,3 +1,5 @@
+/* PROJECT DETAIL PAGE ONLY */
+
 .project-detail {
   max-width: 900px;
   margin: 120px auto;
@@ -21,9 +23,15 @@
 
 .detail-block h2 {
   color: #14b8a6;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
+.detail-block p {
+  color: #94a3b8;
+  line-height: 1.9;
+}
+
+/* BULLETS */
 .highlight-list,
 .workflow-list {
   list-style: none;
@@ -41,18 +49,5 @@
 .highlight-list li::before,
 .workflow-list li::before {
   content: "✔";
-  color: #14b8a6;
-}
-
-.tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.tags span {
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: rgba(20,184,166,0.18);
   color: #14b8a6;
 }
