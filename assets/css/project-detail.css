@@ -1,60 +1,58 @@
-/* ===============================
-   PROJECT DETAIL PAGE ONLY
-================================ */
-
 .project-detail {
   max-width: 900px;
-  margin: 140px auto;
+  margin: 120px auto;
   padding: 0 24px;
 }
 
-/* MAIN TITLE */
 .project-detail h1 {
-  font-size: 2.7rem;
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+}
+
+.project-subtitle {
+  color: #94a3b8;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+
+.detail-block {
+  margin-bottom: 60px;
+}
+
+.detail-block h2 {
+  color: #14b8a6;
   margin-bottom: 18px;
 }
 
-/* SUBTITLE */
-.project-subtitle {
-  font-size: 1.05rem;
+.highlight-list,
+.workflow-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-list li,
+.workflow-list li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
   color: #94a3b8;
-  margin-bottom: 60px;
-  line-height: 1.9;
 }
 
-/* SECTION BLOCK */
-.detail-block {
-  margin-bottom: 70px;
-}
-
-/* SECTION HEADINGS */
-.detail-block h2 {
-  font-size: 1.55rem;
-  margin-bottom: 20px;
+.highlight-list li::before,
+.workflow-list li::before {
+  content: "✔";
   color: #14b8a6;
 }
 
-/* PARAGRAPH TEXT */
-.detail-block p {
-  font-size: 1rem;
-  line-height: 2;
-  color: #94a3b8;
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* LISTS */
-.detail-block ul {
-  padding-left: 24px;
-  margin-top: 14px;
+.tags span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(20,184,166,0.18);
+  color: #14b8a6;
 }
-
-.detail-block li {
-  margin-bottom: 14px;
-  line-height: 1.9;
-  color: #94a3b8;
-}
-
-/* BACK BUTTON */
-.project-detail .btn {
-  margin-top: 40px;
-}
-
