@@ -429,42 +429,53 @@ main.main-content {
 
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin: 32px auto 0 auto;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* BIGGER base */
+  gap: 36px;
+  margin: 36px auto 0 auto;
+  max-width: 1200px; /* allow larger visuals */
   justify-items: center;
 }
 
-/* Individual Screenshot */
+/* Screenshot Card */
 .project-gallery img {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;        /* ⬅ increased from 420 */
   height: auto;
   display: block;
-  border-radius: 14px;
+  border-radius: 18px;
   background: #0b1220;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Hover Effect */
+/* Hover (subtle, professional) */
 .project-gallery img:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.5);
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.6);
 }
 
-/* Section Wrapper Fix (IMPORTANT) */
+/* Section container (keeps it centered) */
 .project-detail .section {
-  max-width: 1100px;
-  margin: 0 auto 48px auto;
-  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto 56px auto;
+  padding: 0 24px;
 }
 
-/* Mobile Optimization */
+/* Tablet */
+@media (max-width: 900px) {
+  .project-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .project-gallery img {
+    max-width: 480px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
   .project-gallery {
-    gap: 20px;
+    gap: 24px;
   }
 
   .project-gallery img {
