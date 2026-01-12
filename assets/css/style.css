@@ -429,22 +429,45 @@ main.main-content {
 
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-  margin-top: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin: 32px auto 0 auto;
+  max-width: 1100px;
   justify-items: center;
 }
 
+/* Individual Screenshot */
 .project-gallery img {
   width: 100%;
   max-width: 420px;
   height: auto;
+  display: block;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #0b1220;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* Hover Effect */
 .project-gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Wrapper Fix (IMPORTANT) */
+.project-detail .section {
+  max-width: 1100px;
+  margin: 0 auto 48px auto;
+  padding: 0 20px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  .project-gallery {
+    gap: 20px;
+  }
+
+  .project-gallery img {
+    max-width: 100%;
+  }
 }
