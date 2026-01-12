@@ -399,3 +399,25 @@ main.main-content {
   text-align: center;
 }
 
+/* =========================
+   CERTIFICATE DISPLAY
+========================= */
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.certificate-grid img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(20,184,166,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificate-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(20,184,166,0.35);
+}
