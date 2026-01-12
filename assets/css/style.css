@@ -306,3 +306,56 @@ main.main-content {
   outline: none;
   box-shadow: 0 0 0 3px rgba(20,184,166,0.4);
 }
+
+/* ============================
+   SKILLS PAGE ENHANCEMENTS
+============================= */
+
+/* Section card feel */
+.section {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.65)
+  );
+  border-radius: 16px;
+  padding: 32px 28px;
+  margin-bottom: 48px;
+  border: 1px solid rgba(20,184,166,0.08);
+}
+
+/* Section titles stronger */
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+  letter-spacing: 0.3px;
+}
+
+/* Skill tags polish */
+.tags span {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  cursor: default;
+}
+
+/* Hover interaction */
+.tags span:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(20,184,166,0.35);
+  background: rgba(20,184,166,0.28);
+}
+
+/* Keyboard accessibility */
+.tags span:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(20,184,166,0.45);
+}
+
+/* Better spacing for long pages */
+@media (max-width: 768px) {
+  .section {
+    padding: 26px 20px;
+  }
+}
