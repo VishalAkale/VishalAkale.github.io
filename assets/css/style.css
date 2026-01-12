@@ -380,3 +380,69 @@ main.main-content {
     max-width: 280px;
   }
 }
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Attrition Dashboard - Vishal Akale</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Vishal Akale</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../projects.html" class="active">Projects</a></li>
+      <li><a href="../skills.html">Skills</a></li>
+      <li><a href="../experience.html">Experience</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="project-detail">
+    <h1>HR Attrition & Workforce Analytics</h1>
+    <p class="project-subtitle">
+      Interactive Power BI dashboard predicting employee attrition patterns.
+    </p>
+
+    <div class="section">
+      <h2>Problem Statement</h2>
+      <p>Organizations struggle to predict attrition. This dashboard provides interactive insights for retention strategies.</p>
+    </div>
+
+    <div class="section">
+      <h2>Tools Used</h2>
+      <div class="tags">
+        <span>Power BI</span>
+        <span>DAX</span>
+        <span>Data Modeling</span>
+        <span>KPI Design</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Key Responsibilities</h2>
+      <ul>
+        <li>Analyzed attrition across departments, salary bands, and tenure</li>
+        <li>Built interactive dashboards with KPIs and slicers</li>
+        <li>Created DAX measures for workforce metrics</li>
+        <li>Delivered executive insights</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Key Insights</h2>
+      <ul>
+        <li>Highest attrition: Technology & Sales departments</li>
+        <li>Medium salary band has highest exits</li>
+        <li>Early tenure (0–3 years) is highest risk</li>
+      </ul>
+    </div>
+
+    <a href="../projects.html" class="btn">← Back to Projects</a>
+  </section>
+</body>
+</html>
