@@ -391,10 +391,11 @@ main.main-content {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   max-width: 520px;
-  margin-top: 35px;
+  margin: 35px auto 0;
 }
 
 .contact-actions .btn {
   width: 100%;
   text-align: center;
 }
+
