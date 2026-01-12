@@ -234,3 +234,75 @@ main.main-content {
     padding: 80px 14px 50px;
   }
 }
+
+/* ============================
+   BUTTON ANIMATIONS (PRO LEVEL)
+============================= */
+
+/* Base animation prep */
+.btn,
+.btn-primary,
+.btn-secondary {
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+  position: relative;
+}
+
+/* Hover: lift + glow */
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(20,184,166,0.45);
+}
+
+/* Active: press effect */
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 6px 18px rgba(20,184,166,0.35);
+}
+
+/* Glow ring animation */
+.btn::after,
+.btn-primary::after,
+.btn-secondary::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::after,
+.btn-primary:hover::after,
+.btn-secondary:hover::after {
+  border-color: rgba(20,184,166,0.7);
+  opacity: 1;
+}
+
+/* Arrow micro-animation (for → buttons) */
+.btn:hover span,
+.btn-primary:hover span {
+  transform: translateX(4px);
+}
+
+.btn span,
+.btn-primary span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Focus (keyboard accessibility) */
+.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(20,184,166,0.4);
+}
