@@ -359,3 +359,25 @@ main.main-content {
     padding: 26px 20px;
   }
 }
+
+
+/* ============================
+   DURATION / META BADGES
+============================= */
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 18px;
+}
+
+.meta span {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 14px;
+  background: rgba(20, 184, 166, 0.15);
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
