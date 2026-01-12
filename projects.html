@@ -2,112 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Projects | Vishal Akale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Vishal Akale</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="logo">Vishal Akale</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
 
-  <main class="main-content">
-    <section class="hero">
-      <h1>My Projects<span></span></h1>
-      <p>Real-world ML systems, data analytics dashboards, and production-ready applications showcasing technical expertise across multiple domains.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Vishal Akale</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+  </ul>
+</nav>
+
+<!-- PROJECTS SECTION -->
+<section class="projects-section">
+
+  <h1 class="section-title">Projects</h1>
+  <p class="section-subtitle">
+    A selection of projects across Data Analytics, Python Development, and AI & Machine Learning.
+  </p>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+      <h3>Restaurant Rating Prediction System</h3>
+      <p>
+        End-to-end machine learning system to predict restaurant ratings based on city and cuisine.
+      </p>
+      <div class="tags">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>Flask</span>
       </div>
-    </section>
+      <a href="projects/rating-prediction.html" class="btn secondary">
+        View Project
+      </a>
+    </div>
 
-    <section class="projects-grid" id="projects">
-      
-      <!-- PROJECT 1: Rating Prediction -->
-      <div class="project-card">
-        <img src="assets/images/projects/rating.png" alt="Restaurant Rating Prediction" loading="lazy">
-        <h3>Restaurant Rating Prediction</h3>
-        <p>End-to-end ML pipeline with Flask deployment predicting restaurant ratings using location and cuisine data.</p>
-        <div class="tags">
-          <span>Python</span>
-          <span>Flask</span>
-          <span>Scikit-learn</span>
-        </div>
-        <a href="projects/rating-prediction.html" class="btn btn-primary">View Project</a>
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+      <h3>HR Attrition & Workforce Analytics Dashboard</h3>
+      <p>
+        Power BI dashboard analyzing employee attrition trends, tenure patterns, and workforce risks.
+      </p>
+      <div class="tags">
+        <span>Power BI</span>
+        <span>DAX</span>
+        <span>HR Analytics</span>
       </div>
+      <a href="projects/hr-attrition.html" class="btn secondary">
+        View Project
+      </a>
+    </div>
 
-      <!-- PROJECT 2: HR Attrition -->
-      <div class="project-card">
-        <img src="assets/images/projects/hr.png" alt="HR Attrition Dashboard" loading="lazy">
-        <h3>HR Attrition Analytics</h3>
-        <p>Interactive Power BI dashboard analyzing employee attrition patterns across departments and salary bands.</p>
-        <div class="tags">
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>KPI Design</span>
-        </div>
-        <a href="projects/hr-attrition.html" class="btn btn-primary">View Project</a>
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+      <h3>Few-Shot Learning for Anomaly Detection</h3>
+      <p>
+        Team research project applying few-shot learning to detect unusual electricity usage patterns.
+      </p>
+      <div class="tags">
+        <span>AI & ML</span>
+        <span>Few-Shot Learning</span>
+        <span>Research</span>
       </div>
+      <a href="projects/few-shot-anomaly.html" class="btn secondary">
+        View Project
+      </a>
+    </div>
 
-      <!-- PROJECT 3: Recommendation System -->
-      <div class="project-card">
-        <img src="assets/images/projects/recommender.png" alt="Recommendation System" loading="lazy">
-        <h3>Restaurant Recommendation</h3>
-        <p>Hybrid ML recommendation engine with Flask APIs and Google Maps integration for personalized suggestions.</p>
-        <div class="tags">
-          <span>Python</span>
-          <span>Flask</span>
-          <span>Machine Learning</span>
-        </div>
-        <a href="projects/recommendation-system.html" class="btn btn-primary">View Project</a>
+    <!-- PROJECT 4 -->
+    <div class="project-card">
+      <h3>Restaurant Recommendation System</h3>
+      <p>
+        Hybrid recommendation system using cuisine similarity, ratings, cost, and popularity.
+      </p>
+      <div class="tags">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>Flask</span>
       </div>
+      <a href="projects/recommendation-system.html" class="btn secondary">
+        View Project
+      </a>
+    </div>
 
-      <!-- PROJECT 4: Map Analytics -->
-      <div class="project-card">
-        <img src="assets/images/projects/map.png" alt="Map Analytics" loading="lazy">
-        <h3>Map & Analytics Dashboard</h3>
-        <p>Geospatial analytics dashboard with Leaflet.js clustering and Plotly visualizations for restaurant location intelligence.</p>
-        <div class="tags">
-          <span>Python</span>
-          <span>Leaflet.js</span>
-          <span>Plotly</span>
-        </div>
-        <a href="projects/map-analytics.html" class="btn btn-primary">View Project</a>
+    <!-- PROJECT 5 -->
+    <div class="project-card">
+      <h3>Restaurant Map & Analytics Dashboard</h3>
+      <p>
+        Interactive geospatial analytics dashboard visualizing restaurant data across cities.
+      </p>
+      <div class="tags">
+        <span>Python</span>
+        <span>Geospatial</span>
+        <span>Analytics</span>
       </div>
+      <a href="projects/map-analytics.html" class="btn secondary">
+        View Project
+      </a>
+    </div>
 
-      <!-- PROJECT 5: Few-Shot Anomaly -->
-      <div class="project-card">
-        <img src="assets/images/projects/fewshot.png" alt="Few-Shot Anomaly Detection" loading="lazy">
-        <h3>Few-Shot Anomaly Detection</h3>
-        <p>Smart grid anomaly detection using few-shot learning techniques with minimal labeled training data.</p>
-        <div class="tags">
-          <span>Python</span>
-          <span>Few-Shot Learning</span>
-          <span>Scikit-learn</span>
-        </div>
-        <a href="projects/few-shot-anomaly.html" class="btn btn-primary">View Project</a>
+    <!-- PROJECT 6 -->
+    <div class="project-card">
+      <h3>E-Commerce Customer Churn Dashboard</h3>
+      <p>
+        Business-focused Power BI dashboard analyzing customer churn patterns and retention metrics.
+      </p>
+      <div class="tags">
+        <span>Power BI</span>
+        <span>Churn Analysis</span>
+        <span>Business Intelligence</span>
       </div>
+      <a href="projects/churn-dashboard.html" class="btn secondary">
+        View Project
+      </a>
+    </div>
 
-      <!-- PROJECT 6: Churn Dashboard -->
-      <div class="project-card">
-        <img src="assets/images/projects/churn.png" alt="Churn Analysis Dashboard" loading="lazy">
-        <h3>Customer Churn Dashboard</h3>
-        <p>E-commerce churn analysis dashboard with Power BI revealing key retention insights and patterns.</p>
-        <div class="tags">
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>Customer Analytics</span>
-        </div>
-        <a href="projects/churn-dashboard.html" class="btn btn-primary">View Project</a>
-      </div>
+  </div>
+</section>
 
-    </section>
-  </main>
 </body>
 </html>
