@@ -427,18 +427,21 @@ main.main-content {
 
 
 /* ===============================
-   NAVBAR ICONS (SAFE ADD-ON)
+   NAVBAR ICONS (SAFE POLISH)
 ================================ */
 
 .nav-links a {
   display: flex;
-  align-items: center;
-  gap: 8px;              /* space between icon & text */
+  align-items: center;          /* ⬅ hard vertical centering */
+  gap: 8px;                     /* space between icon & text */
+  line-height: 1;               /* ⬅ prevents baseline drift */
 }
 
 .nav-links a img {
   width: 18px;
   height: 18px;
+  display: inline-block;        /* ⬅ baseline-safe */
+  vertical-align: middle;       /* ⬅ extra safety */
   filter: brightness(0) saturate(100%) invert(70%);
   transition: filter 0.25s ease, transform 0.25s ease;
 }
@@ -448,5 +451,5 @@ main.main-content {
 .nav-links a.active img {
   filter: brightness(0) saturate(100%) invert(60%) sepia(60%)
           saturate(600%) hue-rotate(125deg);
-  transform: translateY(-1px);
+  transform: scale(1.05);       /* ⬅ scale instead of Y-shift */
 }
