@@ -479,22 +479,13 @@ main.main-content {
 }
 
 
-/* =========================================
-  16. SKILLS SECTION – EMOJI ICON SUPPORT
-========================================= */
 
-/* Emoji inside skill icon box */
-.skill-emoji {
-  font-size: 26px;      /* Controls emoji size (balanced, not oversized) */
-  line-height: 1;       /* Prevents extra vertical spacing */
-  display: block;       /* Ensures proper centering inside icon-box */
-}
 
 /* =========================================
-   17. CORE TECHNICAL SKILLS (TAG STYLE)
+   16. CORE TECHNICAL SKILLS – TAG STYLE
    - Matches Soft Skills design
    - Emoji + text inline
-   - NO HTML changes
+   - SAFE: No HTML changes
 ========================================= */
 
 /* Container behaves like tags */
@@ -505,7 +496,7 @@ main.main-content {
   margin-top: 20px;
 }
 
-/* Each skill becomes a pill */
+/* Each skill becomes a pill (same as tags) */
 .skill-card {
   background: rgba(20, 184, 166, 0.18);
   border: 1px solid rgba(20, 184, 166, 0.25);
@@ -521,19 +512,19 @@ main.main-content {
               background 0.25s ease;
 }
 
-/* Hover effect — same as tags */
+/* Hover effect (consistent with tags & soft skills) */
 .skill-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(20,184,166,0.35);
-  background: rgba(20,184,166,0.28);
+  box-shadow: 0 10px 22px rgba(20, 184, 166, 0.35);
+  background: rgba(20, 184, 166, 0.28);
 }
 
-/* Hide old icon box safely */
+/* Hide old icon box (emoji-only approach) */
 .skill-card .icon-box {
   display: none;
 }
 
-/* Emoji size tuned for pills */
+/* Emoji size tuned for pill layout */
 .skill-emoji {
   font-size: 16px;
   line-height: 1;
