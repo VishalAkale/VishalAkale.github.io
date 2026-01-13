@@ -1,4 +1,4 @@
-/* =========================================================
+/* ========================================================= 
    PROJECTS.CSS — Projects Listing Page
    Depends on base.css + navbar.css
 ========================================================= */
@@ -29,7 +29,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 36px;
-  align-items: stretch;
+  align-items: stretch; /* cards equal height */
 }
 
 /* ===============================
@@ -71,6 +71,7 @@
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 18px;
+  flex-shrink: 0; /* prevents image compression */
 }
 
 /* ===============================
@@ -100,16 +101,16 @@
 ================================ */
 
 .project-card .tags {
-  margin-bottom: 22px;
+  margin-bottom: 26px; /* equal breathing space before button */
 }
 
 /* ===============================
-   CTA BUTTON
+   CTA BUTTON (ALIGNMENT FIX)
 ================================ */
 
 .project-card .btn {
-  margin-top: auto;
-  align-self: flex-start;
+  margin-top: auto;          /* pushes button to bottom */
+  align-self: flex-start;    /* consistent left alignment */
 }
 
 /* ===============================
