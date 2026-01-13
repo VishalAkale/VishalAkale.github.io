@@ -24,43 +24,34 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================================================
-   2. NAVBAR
-========================================================= */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: var(--card);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-}
-
-.logo {
-  color: var(--accent);
-  font-weight: 600;
-  font-size: 1.3rem;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
+/* ===============================
+   NAVBAR ICONS (SAFE POLISH)
+================================ */
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--muted);
+  display: flex;
+  align-items: center;          /* ⬅ hard vertical centering */
+  gap: 8px;                     /* space between icon & text */
+  line-height: 1;               /* ⬅ prevents baseline drift */
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--accent);
+.nav-links a img {
+  width: 18px;
+  height: 18px;
+  display: inline-block;        /* ⬅ baseline-safe */
+  vertical-align: middle;       /* ⬅ extra safety */
+  filter: brightness(0) saturate(100%) invert(70%);
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
+
+/* Active & hover icon color */
+.nav-links a:hover img,
+.nav-links a.active img {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(60%)
+          saturate(600%) hue-rotate(125deg);
+  transform: scale(1.05);       /* ⬅ scale instead of Y-shift */
+}
+
 
 /* =========================================================
    3. MAIN LAYOUT
@@ -423,35 +414,6 @@ main.main-content {
     max-width: 100%;
     padding: 10px;
   }
-}
-
-
-/* ===============================
-   NAVBAR ICONS (SAFE POLISH)
-================================ */
-
-.nav-links a {
-  display: flex;
-  align-items: center;          /* ⬅ hard vertical centering */
-  gap: 8px;                     /* space between icon & text */
-  line-height: 1;               /* ⬅ prevents baseline drift */
-}
-
-.nav-links a img {
-  width: 18px;
-  height: 18px;
-  display: inline-block;        /* ⬅ baseline-safe */
-  vertical-align: middle;       /* ⬅ extra safety */
-  filter: brightness(0) saturate(100%) invert(70%);
-  transition: filter 0.25s ease, transform 0.25s ease;
-}
-
-/* Active & hover icon color */
-.nav-links a:hover img,
-.nav-links a.active img {
-  filter: brightness(0) saturate(100%) invert(60%) sepia(60%)
-          saturate(600%) hue-rotate(125deg);
-  transform: scale(1.05);       /* ⬅ scale instead of Y-shift */
 }
 
 
