@@ -1,1 +1,164 @@
+/* =========================================================
+   BASE.CSS — GLOBAL FOUNDATION STYLES
+   Used by ALL pages
+========================================================= */
+
+/* ===============================
+   1. RESET & GLOBAL VARIABLES
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #14b8a6;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   2. MAIN LAYOUT
+================================ */
+
+main.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 24px 80px;
+}
+
+/* ===============================
+   3. CONTENT SECTIONS
+================================ */
+
+.section {
+  max-width: 780px;
+  margin: 0 auto 55px;
+  padding: 32px 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.65)
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(20,184,166,0.08);
+}
+
+.section h2 {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+}
+
+.section p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section li {
+  padding: 14px 18px 14px 42px;
+  background: rgba(20,184,166,0.06);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  position: relative;
+}
+
+.section li::before {
+  content: "✦";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent);
+}
+
+/* ===============================
+   4. TAGS / BADGES
+================================ */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tags span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(20,184,166,0.18);
+  color: var(--accent);
+  font-size: 0.75rem;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.tags span:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(20,184,166,0.35);
+  background: rgba(20,184,166,0.28);
+}
+
+/* ===============================
+   5. BUTTONS (BASE)
+================================ */
+
+.btn,
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  align-self: center;
+  position: relative;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(20,184,166,0.45);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* ===============================
+   6. RESPONSIVE BASE
+================================ */
+
+@media (max-width: 480px) {
+  main.main-content {
+    padding: 80px 14px 50px;
+  }
+}
 
