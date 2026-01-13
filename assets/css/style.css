@@ -341,31 +341,56 @@ main.main-content {
 
 
 /* ===============================
-   13. NAVBAR ICONS (SAFE POLISH)
+   13. NAVBAR ICONS (FINAL FIX)
 ================================ */
 
-.nav-links a {
+/* Keep navbar horizontal */
+.nav-links {
+  list-style: none;
   display: flex;
-  align-items: center;          /* ⬅ hard vertical centering */
-  gap: 8px;                     /* space between icon & text */
-  line-height: 1;               /* ⬅ prevents baseline drift */
+  align-items: center;     /* ⬅ hard vertical alignment */
+  gap: 30px;
 }
 
+/* Anchor = icon + text inline */
+.nav-links a {
+  display: inline-flex;    /* ⬅ IMPORTANT (prevents column stacking) */
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--muted);
+  line-height: 1;
+}
+
+/* Icon size & baseline safety */
 .nav-links a img {
   width: 18px;
   height: 18px;
-  display: inline-block;        /* ⬅ baseline-safe */
-  vertical-align: middle;       /* ⬅ extra safety */
+  display: inline-block;
+  vertical-align: middle;
   filter: brightness(0) saturate(100%) invert(70%);
   transition: filter 0.25s ease, transform 0.25s ease;
 }
 
-/* Active & hover icon color */
+/* Hover / active */
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+}
+
 .nav-links a:hover img,
 .nav-links a.active img {
-  filter: brightness(0) saturate(100%) invert(60%) sepia(60%)
-          saturate(600%) hue-rotate(125deg);
-  transform: scale(1.05);       /* ⬅ scale instead of Y-shift */
+  filter: brightness(0) saturate(100%) invert(60%)
+          sepia(60%) saturate(600%) hue-rotate(125deg);
+  transform: scale(1.05);
+}
+
+/* Mobile navbar stays stacked */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 /* =========================================
@@ -463,4 +488,64 @@ main.main-content {
   font-size: 26px;      /* Controls emoji size (balanced, not oversized) */
   line-height: 1;       /* Prevents extra vertical spacing */
   display: block;       /* Ensures proper centering inside icon-box */
+}
+
+/* =========================================
+   17. SKILLS – CORE TECHNICAL (EMOJI GRID)
+========================================= */
+
+/* Grid wrapper */
+.core-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 22px;
+  margin-top: 20px;
+}
+
+/* Individual skill card */
+.skill-card {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.9),
+    rgba(2, 6, 23, 0.7)
+  );
+  border-radius: 18px;
+  padding: 18px 14px;
+  text-align: center;
+  border: 1px solid rgba(20,184,166,0.12);
+}
+
+/* Emoji container */
+.skill-card .icon-box {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.95);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Emoji itself */
+.skill-emoji {
+  font-size: 24px;     /* ⬅ balanced & readable */
+  line-height: 1;
+}
+
+/* Skill name */
+.skill-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Mobile refinement */
+@media (max-width: 480px) {
+  .core-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
