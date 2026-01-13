@@ -1,1 +1,22 @@
+/* CONTACT BUTTON ICONS */
+
+.contact-actions .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-actions .btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(70%);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.contact-actions .btn:hover img {
+  filter: brightness(0) saturate(100%) invert(60%)
+          sepia(60%) saturate(600%) hue-rotate(125deg);
+  transform: scale(1.1);
+}
 
