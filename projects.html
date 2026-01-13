@@ -2,213 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects | Vishal Akale</title>
+  <title>Restaurant Rating Prediction System | Vishal Akale</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/navbar.css">
-  <link rel="stylesheet" href="assets/css/projects.css">
 
+  <!-- Base -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/navbar.css">
+
+  <!-- Shared components + project detail styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 
 <body>
 
- <!-- NAVBAR -->
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Vishal Akale</div>
 
   <ul class="nav-links">
-    <li>
-      <a href="index.html">
-        <img src="/assets/icons/navbar/home.svg" alt="Home">
-        Home
-      </a>
-    </li>
-
-    <li>
-      <a href="projects.html" class="active">
-        <img src="/assets/icons/navbar/projects.svg" alt="Projects">
-        Projects
-      </a>
-    </li>
-
-    <li>
-      <a href="skills.html">
-        <img src="/assets/icons/navbar/skills.svg" alt="Skills">
-        Skills
-      </a>
-    </li>
-
-    <li>
-      <a href="experience.html">
-        <img src="/assets/icons/navbar/experience.svg" alt="Experience">
-        Experience
-      </a>
-    </li>
-
-    <li>
-      <a href="contact.html">
-        <img src="/assets/icons/navbar/contact.svg" alt="Contact">
-        Contact
-      </a>
-    </li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../projects.html" class="active">Projects</a></li>
+    <li><a href="../skills.html">Skills</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../contact.html">Contact</a></li>
   </ul>
 </nav>
 
+<!-- PROJECT DETAIL -->
+<section class="project-detail">
 
-<!-- PROJECTS SECTION -->
-<section class="projects-section">
-
-  <h1 class="section-title">Projects</h1>
-  <p class="section-subtitle">
-    A selection of projects across Data Analytics, Python Development, and AI & Machine Learning.
+  <h1>Restaurant Rating Prediction System</h1>
+  <p class="project-subtitle">
+    End-to-end ML system predicting restaurant ratings using location, cuisine,
+    and customer data with Flask deployment.
   </p>
 
-  <div class="projects-grid">
+  <h2>Problem Statement</h2>
+  <p>
+    Restaurants struggle to predict customer ratings based on location and cuisine factors.
+    This project delivers a scalable ML solution with Flask API integration for real-time predictions.
+  </p>
 
-    <!-- PROJECT 1 -->
-    <div class="project-card">
-      <img src="assets/images/projects/rating-prediction-app-ui.png"
-           alt="Restaurant Rating Prediction"
-           class="project-img">
+  <h2>Tools & Technologies</h2>
+  <p>Python, Flask, Scikit-learn, Pandas, NumPy, Git/GitHub, HTML/CSS/JS</p>
 
-      <div class="project-content">
-        <h3>Restaurant Rating Prediction System</h3>
-        <p>
-          End-to-end machine learning system to predict restaurant ratings based on city and cuisine.
-        </p>
+  <h2>Your Role & Responsibilities</h2>
+  <ul>
+    <li>Designed and trained machine learning models</li>
+    <li>Built Flask API for real-time predictions</li>
+    <li>Developed responsive frontend interface</li>
+    <li>Managed project with Git/GitHub version control</li>
+  </ul>
 
-        <div class="tags">
-          <span>Python</span>
-          <span>Machine Learning</span>
-          <span>Flask</span>
-        </div>
+  <h2>System Architecture</h2>
+  <p>
+    Raw data → Preprocessing → Model Training → Flask API →
+    Responsive Frontend → Real-time Predictions
+  </p>
 
-        <a href="projects/rating-prediction.html" class="btn btn-secondary">
-          View Project
-        </a>
-      </div>
-    </div>
+  <h2>Key Features</h2>
+  <ul>
+    <li>ML-powered rating prediction with high accuracy</li>
+    <li>Complete ML + Flask API integration</li>
+    <li>Auto-suggestion input fields</li>
+    <li>Production-ready deployment structure</li>
+    <li>Clear role mapping for Data Analyst / ML Engineer</li>
+  </ul>
 
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-      <img src="assets/images/projects/hr.png"
-           alt="HR Attrition Dashboard"
-           class="project-img">
+</section>
 
-      <div class="project-content">
-        <h3>HR Attrition & Workforce Analytics Dashboard</h3>
-        <p>
-          Power BI dashboard analyzing employee attrition trends, tenure patterns, and workforce risks.
-        </p>
+<!-- SCREENSHOTS -->
+<section class="project-screenshots">
+  <h2 style="text-align:center; margin-bottom:40px;">Project Screenshots</h2>
 
-        <div class="tags">
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>HR Analytics</span>
-        </div>
-
-        <a href="projects/hr-attrition.html" class="btn btn-secondary">
-          View Project
-        </a>
-      </div>
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="project-card">
-      <img src="assets/images/projects/anomaly-detection-app-ui.png"
-           alt="Few Shot Anomaly Detection"
-           class="project-img">
-
-      <div class="project-content">
-        <h3>Few-Shot Learning for Anomaly Detection</h3>
-        <p>
-          Team research project applying few-shot learning to detect unusual electricity usage patterns.
-        </p>
-
-        <div class="tags">
-          <span>AI & ML</span>
-          <span>Few-Shot Learning</span>
-          <span>Research</span>
-        </div>
-
-        <a href="projects/few-shot-anomaly.html" class="btn btn-secondary">
-          View Project
-        </a>
-      </div>
-    </div>
-
-    <!-- PROJECT 4 -->
-    <div class="project-card">
-      <img src="assets/images/projects/restaurant_recommender_results_3.png"
-           alt="Restaurant Recommendation System"
-           class="project-img">
-
-      <div class="project-content">
-        <h3>Restaurant Recommendation System</h3>
-        <p>
-          Hybrid recommendation system using cuisine similarity, ratings, cost, and popularity.
-        </p>
-
-        <div class="tags">
-          <span>Python</span>
-          <span>Machine Learning</span>
-          <span>Flask</span>
-        </div>
-
-        <a href="projects/recommendation-system.html" class="btn btn-secondary">
-          View Project
-        </a>
-      </div>
-    </div>
-
-    <!-- PROJECT 5 -->
-    <div class="project-card">
-      <img src="assets/images/projects/restaurant-map-india-overview.png"
-           alt="Restaurant Map Analytics"
-           class="project-img">
-
-      <div class="project-content">
-        <h3>Restaurant Map & Analytics Dashboard</h3>
-        <p>
-          Interactive geospatial analytics dashboard visualizing restaurant data across cities.
-        </p>
-
-        <div class="tags">
-          <span>Python</span>
-          <span>Geospatial</span>
-          <span>Analytics</span>
-        </div>
-
-        <a href="projects/map-analytics.html" class="btn btn-secondary">
-          View Project
-        </a>
-      </div>
-    </div>
-
-    <!-- PROJECT 6 -->
-    <div class="project-card">
-      <img src="assets/images/projects/churn-dashboard-overview.png"
-           alt="Customer Churn Dashboard"
-           class="project-img">
-
-      <div class="project-content">
-        <h3>E-Commerce Customer Churn Dashboard</h3>
-        <p>
-          Business-focused Power BI dashboard analyzing customer churn patterns and retention metrics.
-        </p>
-
-        <div class="tags">
-          <span>Power BI</span>
-          <span>Churn Analysis</span>
-          <span>Business Intelligence</span>
-        </div>
-
-        <a href="projects/churn-dashboard.html" class="btn btn-secondary">
-          View Project
-        </a>
-      </div>
-    </div>
-
+  <div class="project-gallery">
+    <img src="../assets/images/projects/rating-prediction-app-ui.png" alt="App UI">
+    <img src="../assets/images/projects/rating-prediction-app-ui.png" alt="Prediction Result">
   </div>
 </section>
 
