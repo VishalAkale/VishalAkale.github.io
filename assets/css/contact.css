@@ -1,21 +1,20 @@
 /* =========================================================
    CONTACT PAGE – PAGE-SCOPED STYLES
-   Depends on base.css + style.css
 ========================================================= */
 
-/* ---------- PAGE WIDTH CONTROL ---------- */
+/* Page width control */
 .main-content {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ---------- SECTION ALIGNMENT ---------- */
+/* Sections */
 .section {
   margin-bottom: 60px;
 }
 
-/* ---------- INTRO ---------- */
+/* Intro */
 .section-title {
   text-align: center;
 }
@@ -26,7 +25,7 @@
   margin: 12px auto 0;
 }
 
-/* ---------- CONTENT ---------- */
+/* Content */
 .section h2 {
   text-align: center;
 }
@@ -37,7 +36,7 @@
   text-align: center;
 }
 
-/* ---------- TAGS ---------- */
+/* Tags */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +46,7 @@
   margin: 24px auto 0;
 }
 
-/* ---------- CONTACT ACTION BUTTONS ---------- */
+/* Contact buttons */
 .contact-actions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -66,29 +65,14 @@
   font-size: 0.95rem;
 }
 
-/* Icons */
-.contact-actions img {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) saturate(100%) invert(70%);
-  transition: filter 0.25s ease, transform 0.25s ease;
-}
-
-/* Hover sync */
-.contact-actions .btn:hover img {
-  filter: brightness(0) saturate(100%) invert(60%)
-          sepia(60%) saturate(600%) hue-rotate(125deg);
-  transform: scale(1.1);
-}
-
-/* ---------- FOOTER TEXT ---------- */
+/* Footer */
 .footer-text {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* ---------- MOBILE ---------- */
+/* Mobile */
 @media (max-width: 480px) {
   .contact-actions {
     gap: 16px;
