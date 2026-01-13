@@ -491,10 +491,12 @@ main.main-content {
 }
 
 /* =========================================
-   17. SKILLS – CORE TECHNICAL (EMOJI GRID)
+   17. CORE TECHNICAL SKILLS (EMOJI VERSION)
+   - Uses emojis instead of SVG icons
+   - Fully responsive & browser-safe
 ========================================= */
 
-/* Grid wrapper */
+/* Grid container for all skill cards */
 .core-skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -515,14 +517,15 @@ main.main-content {
   border: 1px solid rgba(20,184,166,0.12);
 }
 
-/* Emoji container */
+/* Icon container (white rounded box) */
 .skill-card .icon-box {
   width: 56px;
   height: 56px;
   margin: 0 auto 10px;
   border-radius: 14px;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
 
+  /* Perfect centering for emoji */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,11 +533,11 @@ main.main-content {
 
 /* Emoji itself */
 .skill-emoji {
-  font-size: 24px;     /* ⬅ balanced & readable */
-  line-height: 1;
+  font-size: 24px;   /* Balanced size (not oversized) */
+  line-height: 1;    /* Prevents vertical misalignment */
 }
 
-/* Skill name */
+/* Skill label text */
 .skill-card span {
   display: block;
   margin-top: 6px;
@@ -543,7 +546,7 @@ main.main-content {
   font-weight: 500;
 }
 
-/* Mobile refinement */
+/* Mobile optimization */
 @media (max-width: 480px) {
   .core-skills-grid {
     grid-template-columns: repeat(2, 1fr);
