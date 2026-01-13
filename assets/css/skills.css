@@ -1,0 +1,88 @@
+/* =========================================================
+   SKILLS PAGE ONLY
+   File: assets/css/skills.css
+========================================================= */
+
+/* ---------- Skills Intro Card ---------- */
+
+.section-title {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+/* ---------- Core Technical Skills ---------- */
+
+.core-skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* Pill style (same visual language as soft skills) */
+.skill-card {
+  background: rgba(20, 184, 166, 0.18);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 999px;
+  padding: 8px 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Hover polish */
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(20, 184, 166, 0.35);
+  background: rgba(20, 184, 166, 0.28);
+}
+
+/* Hide legacy icon box (emoji-only design) */
+.skill-card .icon-box {
+  display: none;
+}
+
+/* Emoji sizing */
+.skill-emoji {
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* Skill label text */
+.skill-card span {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ---------- Section spacing refinement ---------- */
+
+.section {
+  margin-bottom: 60px;
+}
+
+/* ---------- Mobile refinement ---------- */
+
+@media (max-width: 480px) {
+  .core-skills-grid {
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+}
