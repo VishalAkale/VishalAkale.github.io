@@ -4,6 +4,12 @@
 ========================================================= */
 
 /* ---------- SECTION WRAPPER ALIGNMENT ---------- */
+/* Page content width control */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .section {
   max-width: 880px;
   margin: 0 auto;
