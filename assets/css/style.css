@@ -456,34 +456,12 @@ main.main-content {
 
 
 /* =========================================
-   CORE SKILLS – FINAL ICON FIX
-   (SIZE + VISIBILITY — SAFE)
+   CORE SKILLS – SVG SAFE FIX (FINAL)
 ========================================= */
 
-/* Core skills grid (unchanged layout) */
-.core-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-}
-
-/* Skill card */
-.skill-card {
-  background: linear-gradient(
-    180deg,
-    rgba(2, 6, 23, 0.9),
-    rgba(2, 6, 23, 0.7)
-  );
-  border-radius: 18px;
-  padding: 16px;
-  text-align: center;
-  border: 1px solid rgba(20,184,166,0.12);
-}
-
-/* Icon container — REDUCED */
 .skill-card .icon-box {
-  width: 58px;          /* ⬅ smaller */
-  height: 58px;
+  width: 56px;
+  height: 56px;
   margin: 0 auto 10px;
   background: #ffffff;
   border-radius: 12px;
@@ -493,18 +471,15 @@ main.main-content {
   justify-content: center;
 }
 
-/* SVG ICON FIX (KEY PART) */
+/* SVG icons – NO FILTERS */
 .skill-card .icon-box img {
-  width: 32px;          /* ⬅ normalized */
-  height: 32px;
-  max-width: 32px;
-  max-height: 32px;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
 
   object-fit: contain;
-
-  /* 🔥 make black SVGs visible */
-  filter: brightness(0) saturate(100%) invert(35%)
-          sepia(60%) saturate(600%) hue-rotate(135deg);
+  display: block;
 }
 
 /* Skill label */
@@ -512,19 +487,19 @@ main.main-content {
   font-size: 0.8rem;
   color: var(--accent);
   font-weight: 500;
-  margin-top: 4px;
+  margin-top: 6px;
   display: block;
 }
 
-/* Mobile safety */
+/* Mobile */
 @media (max-width: 768px) {
   .skill-card .icon-box {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
   }
 
   .skill-card .icon-box img {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 }
