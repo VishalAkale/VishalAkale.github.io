@@ -456,15 +456,15 @@ main.main-content {
 
 
 /* =========================================
-   CORE SKILLS – ICON VISIBILITY & SIZE FIX
-   (SAFE, NO LAYOUT BREAK)
+   CORE SKILLS – ICON SIZE NORMALIZATION
+   (SAFE POLISH – NO LAYOUT CHANGE)
 ========================================= */
 
-/* Core skill cards grid */
+/* Core skill cards */
 .core-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 22px;
 }
 
 /* Skill card */
@@ -474,37 +474,37 @@ main.main-content {
     rgba(2, 6, 23, 0.9),
     rgba(2, 6, 23, 0.7)
   );
-  border-radius: 16px;
-  padding: 14px;                /* ⬅ reduced */
+  border-radius: 18px;
+  padding: 18px;
   text-align: center;
   border: 1px solid rgba(20,184,166,0.12);
 }
 
-/* Icon container */
+/* Icon container (IMPORTANT FIX) */
 .skill-card .icon-box {
-  width: 56px;                  /* ⬅ reduced */
-  height: 56px;                 /* ⬅ reduced */
-  margin: 0 auto 8px;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 10px;
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 14px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Icon itself – FORCE visibility */
+/* Icon itself – normalized */
 .skill-card .icon-box img {
-  width: 32px;                  /* ⬅ controlled */
-  height: 32px;
+  max-width: 42px;
+  max-height: 42px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  filter: none;                 /* ⬅ IMPORTANT: remove wash-out */
-  opacity: 1;
 }
 
 /* Skill label */
 .skill-card span {
-  font-size: 0.8rem;             /* ⬅ slightly smaller */
+  font-size: 0.85rem;
   color: var(--accent);
   font-weight: 500;
 }
@@ -512,12 +512,12 @@ main.main-content {
 /* Mobile safety */
 @media (max-width: 768px) {
   .skill-card .icon-box {
-    width: 52px;
-    height: 52px;
+    width: 64px;
+    height: 64px;
   }
 
   .skill-card .icon-box img {
-    width: 30px;
-    height: 30px;
+    max-width: 36px;
+    max-height: 36px;
   }
 }
