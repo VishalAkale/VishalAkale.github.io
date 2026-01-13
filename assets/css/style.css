@@ -456,68 +456,13 @@ main.main-content {
 
 
 /* =========================================
-   CORE SKILLS – ICON SIZE NORMALIZATION
-   (SAFE POLISH – NO LAYOUT CHANGE)
+   SKILLS SECTION – EMOJI ICON SUPPORT
 ========================================= */
 
-/* Core skill cards */
-.core-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 22px;
+/* Emoji inside skill icon box */
+.skill-emoji {
+  font-size: 26px;      /* Controls emoji size (balanced, not oversized) */
+  line-height: 1;       /* Prevents extra vertical spacing */
+  display: block;       /* Ensures proper centering inside icon-box */
 }
 
-/* Skill card */
-.skill-card {
-  background: linear-gradient(
-    180deg,
-    rgba(2, 6, 23, 0.9),
-    rgba(2, 6, 23, 0.7)
-  );
-  border-radius: 18px;
-  padding: 18px;
-  text-align: center;
-  border: 1px solid rgba(20,184,166,0.12);
-}
-
-/* Icon container (IMPORTANT FIX) */
-.skill-card .icon-box {
-  width: 72px;
-  height: 72px;
-  margin: 0 auto 10px;
-  background: #ffffff;
-  border-radius: 14px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Icon itself – normalized */
-.skill-card .icon-box img {
-  max-width: 42px;
-  max-height: 42px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Skill label */
-.skill-card span {
-  font-size: 0.85rem;
-  color: var(--accent);
-  font-weight: 500;
-}
-
-/* Mobile safety */
-@media (max-width: 768px) {
-  .skill-card .icon-box {
-    width: 64px;
-    height: 64px;
-  }
-
-  .skill-card .icon-box img {
-    max-width: 36px;
-    max-height: 36px;
-  }
-}
