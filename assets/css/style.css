@@ -24,34 +24,43 @@ body {
   overflow-x: hidden;
 }
 
-/* ===============================
-   NAVBAR ICONS (SAFE POLISH)
-================================ */
+/* =========================================================
+   2. NAVBAR
+========================================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.logo {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
 
 .nav-links a {
-  display: flex;
-  align-items: center;          /* ⬅ hard vertical centering */
-  gap: 8px;                     /* space between icon & text */
-  line-height: 1;               /* ⬅ prevents baseline drift */
+  text-decoration: none;
+  color: var(--muted);
 }
 
-.nav-links a img {
-  width: 18px;
-  height: 18px;
-  display: inline-block;        /* ⬅ baseline-safe */
-  vertical-align: middle;       /* ⬅ extra safety */
-  filter: brightness(0) saturate(100%) invert(70%);
-  transition: filter 0.25s ease, transform 0.25s ease;
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
 }
-
-/* Active & hover icon color */
-.nav-links a:hover img,
-.nav-links a.active img {
-  filter: brightness(0) saturate(100%) invert(60%) sepia(60%)
-          saturate(600%) hue-rotate(125deg);
-  transform: scale(1.05);       /* ⬅ scale instead of Y-shift */
-}
-
 
 /* =========================================================
    3. MAIN LAYOUT
@@ -331,8 +340,36 @@ main.main-content {
 }
 
 
+/* ===============================
+   13. NAVBAR ICONS (SAFE POLISH)
+================================ */
+
+.nav-links a {
+  display: flex;
+  align-items: center;          /* ⬅ hard vertical centering */
+  gap: 8px;                     /* space between icon & text */
+  line-height: 1;               /* ⬅ prevents baseline drift */
+}
+
+.nav-links a img {
+  width: 18px;
+  height: 18px;
+  display: inline-block;        /* ⬅ baseline-safe */
+  vertical-align: middle;       /* ⬅ extra safety */
+  filter: brightness(0) saturate(100%) invert(70%);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+/* Active & hover icon color */
+.nav-links a:hover img,
+.nav-links a.active img {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(60%)
+          saturate(600%) hue-rotate(125deg);
+  transform: scale(1.05);       /* ⬅ scale instead of Y-shift */
+}
+
 /* =========================================
-   EXPERIENCE & CERTIFICATION META FIX
+  14. EXPERIENCE & CERTIFICATION META FIX
    (Text → Badge alignment consistency)
 ========================================= */
 
@@ -379,7 +416,7 @@ main.main-content {
 }
 
 /* =========================================================
-   EXPERIENCE PAGE – CERTIFICATE FIX
+  15. EXPERIENCE PAGE – CERTIFICATE FIX
    (POLISH ONLY — NON-BREAKING)
 ========================================================= */
 
@@ -418,7 +455,7 @@ main.main-content {
 
 
 /* =========================================
-   SKILLS SECTION – EMOJI ICON SUPPORT
+  16. SKILLS SECTION – EMOJI ICON SUPPORT
 ========================================= */
 
 /* Emoji inside skill icon box */
@@ -427,4 +464,3 @@ main.main-content {
   line-height: 1;       /* Prevents extra vertical spacing */
   display: block;       /* Ensures proper centering inside icon-box */
 }
-
