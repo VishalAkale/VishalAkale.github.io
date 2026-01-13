@@ -1,95 +1,123 @@
-/* =========================================================
-   CONTACT PAGE – PAGE-SCOPED STYLES
-   No dependency on style.css except variables
-========================================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Vishal Akale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ---------- SECTION WRAPPER ALIGNMENT ---------- */
-/* Page content width control */
-.main-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-.section {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  <!-- Contact Page Styles (IMPORTANT: last) -->
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
 
-/* ---------- INTRO TEXT ---------- */
-.section-title {
-  text-align: center;
-}
+<body>
 
-.section-subtitle {
-  text-align: center;
-  max-width: 640px;
-  margin: 12px auto 0;
-}
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Vishal Akale</div>
 
-/* ---------- CONTENT TEXT ALIGNMENT ---------- */
-.section h2 {
-  text-align: center;
-}
+  <ul class="nav-links">
+    <li>
+      <a href="index.html">
+        <img src="/assets/icons/navbar/home.svg" alt="Home">
+        Home
+      </a>
+    </li>
 
-.section p {
-  max-width: 700px;
-  margin: 14px auto 0;
-  text-align: center;
-}
+    <li>
+      <a href="projects.html">
+        <img src="/assets/icons/navbar/projects.svg" alt="Projects">
+        Projects
+      </a>
+    </li>
 
-/* ---------- TAGS ALIGNMENT ---------- */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  max-width: 700px;
-  margin: 24px auto 0;
-}
+    <li>
+      <a href="skills.html">
+        <img src="/assets/icons/navbar/skills.svg" alt="Skills">
+        Skills
+      </a>
+    </li>
 
-/* ---------- CONTACT ACTION BUTTONS ---------- */
-.contact-actions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-  max-width: 640px;
-  margin: 36px auto 0;
-}
+    <li>
+      <a href="experience.html">
+        <img src="/assets/icons/navbar/experience.svg" alt="Experience">
+        Experience
+      </a>
+    </li>
 
-/* Button alignment (icon + text) */
-.contact-actions .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
-  font-size: 0.95rem;
-}
+    <li>
+      <a href="contact.html" class="active">
+        <img src="/assets/icons/navbar/contact.svg" alt="Contact">
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
 
-/* SVG icons inside buttons */
-.contact-actions img {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) saturate(100%) invert(70%);
-  transition: filter 0.25s ease, transform 0.25s ease;
-}
+<!-- MAIN CONTENT -->
+<main class="main-content">
 
-/* Hover sync with accent */
-.contact-actions .btn:hover img {
-  filter: brightness(0) saturate(100%) invert(60%)
-          sepia(60%) saturate(600%) hue-rotate(125deg);
-  transform: scale(1.1);
-}
+  <!-- INTRO CARD -->
+  <section class="section">
+    <h1 class="section-title">Let’s Connect</h1>
+    <p class="section-subtitle">
+      I’m open to internship opportunities, entry-level roles, project collaborations,
+      and meaningful discussions around data analytics, machine learning, and technology.
+    </p>
+  </section>
 
-/* ---------- MOBILE SAFETY ---------- */
-@media (max-width: 480px) {
-  .contact-actions {
-    gap: 16px;
-  }
+  <!-- CONTACT CONTENT -->
+  <section class="section">
 
-  .contact-actions .btn {
-    padding: 12px 22px;
-    font-size: 0.9rem;
-  }
-}
+    <h2>Get in Touch</h2>
+
+    <p>
+      As a fresher, I’m eager to learn, grow, and gain real-world exposure.
+      I’m happy to connect with recruiters, mentors, or fellow learners
+      to explore internship opportunities, entry-level roles, or collaborative projects.
+    </p>
+
+    <div class="tags">
+      <span>Internship Opportunities</span>
+      <span>Entry-Level Roles</span>
+      <span>Project Collaboration</span>
+      <span>Professional Networking</span>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="contact-actions">
+
+      <a href="mailto:akalevishal02@gmail.com" class="btn btn-primary">
+        <img src="assets/icons/contact/email.svg" alt="Email">
+        Email Me
+      </a>
+
+      <a href="https://www.linkedin.com/in/vishal-akale" target="_blank" class="btn btn-secondary">
+        <img src="assets/icons/contact/linkedin.svg" alt="LinkedIn">
+        Connect on LinkedIn
+      </a>
+
+      <a href="https://github.com/VishalAkale" target="_blank" class="btn btn-secondary">
+        <img src="assets/icons/contact/github.svg" alt="GitHub">
+        View GitHub
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER TEXT -->
+  <section class="section">
+    <p class="footer-text">
+      Open to meaningful conversations and professional opportunities.
+      Let’s build something impactful together.
+    </p>
+  </section>
+
+</main>
+
+</body>
+</html>
