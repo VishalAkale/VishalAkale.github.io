@@ -491,64 +491,65 @@ main.main-content {
 }
 
 /* =========================================
-   17. CORE TECHNICAL SKILLS (EMOJI VERSION)
-   - Uses emojis instead of SVG icons
-   - Fully responsive & browser-safe
+   17. CORE TECHNICAL SKILLS (TAG STYLE)
+   - Matches Soft Skills design
+   - Emoji + text inline
+   - NO HTML changes
 ========================================= */
 
-/* Grid container for all skill cards */
+/* Container behaves like tags */
 .core-skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 20px;
 }
 
-/* Individual skill card */
+/* Each skill becomes a pill */
 .skill-card {
-  background: linear-gradient(
-    180deg,
-    rgba(2, 6, 23, 0.9),
-    rgba(2, 6, 23, 0.7)
-  );
-  border-radius: 18px;
-  padding: 18px 14px;
-  text-align: center;
-  border: 1px solid rgba(20,184,166,0.12);
-}
+  background: rgba(20, 184, 166, 0.18);
+  border: 1px solid rgba(20, 184, 166, 0.25);
+  border-radius: 999px;
+  padding: 8px 14px;
 
-/* Icon container (white rounded box) */
-.skill-card .icon-box {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 10px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.95);
-
-  /* Perfect centering for emoji */
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
 }
 
-/* Emoji itself */
+/* Hover effect — same as tags */
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(20,184,166,0.35);
+  background: rgba(20,184,166,0.28);
+}
+
+/* Hide old icon box safely */
+.skill-card .icon-box {
+  display: none;
+}
+
+/* Emoji size tuned for pills */
 .skill-emoji {
-  font-size: 24px;   /* Balanced size (not oversized) */
-  line-height: 1;    /* Prevents vertical misalignment */
+  font-size: 16px;
+  line-height: 1;
 }
 
-/* Skill label text */
+/* Skill text */
 .skill-card span {
-  display: block;
-  margin-top: 6px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--accent);
   font-weight: 500;
+  white-space: nowrap;
 }
 
-/* Mobile optimization */
+/* Mobile safety */
 @media (max-width: 480px) {
   .core-skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
