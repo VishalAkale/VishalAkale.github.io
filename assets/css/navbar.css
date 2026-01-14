@@ -1,13 +1,20 @@
-/* =========================================================
+/* ========================================================= 
    NAVBAR.CSS — GLOBAL NAVIGATION BAR
    Depends on base.css
 ========================================================= */
+
+/* ===============================
+   DESKTOP / DEFAULT NAVBAR
+================================ */
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
+
+  /* ⬆ Increased padding for less compact look */
+  padding: 26px 70px;
+
   background: var(--card);
   position: sticky;
   top: 0;
@@ -15,11 +22,15 @@
   width: 100%;
 }
 
-/* Logo */
+/* Logo (Name) */
 .logo {
   color: var(--accent);
-  font-weight: 600;
-  font-size: 1.3rem;
+  font-weight: 700;
+
+  /* ⬆ Increased name size */
+  font-size: 1.55rem;
+
+  letter-spacing: 0.3px;
 }
 
 /* Nav list */
@@ -27,7 +38,9 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 30px;
+
+  /* ⬆ Slightly more spacing between items */
+  gap: 34px;
 }
 
 /* Nav links */
@@ -35,19 +48,24 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+
   text-decoration: none;
   color: var(--muted);
-  font-size: 0.95rem;
+
+  /* ⬆ Slightly larger text */
+  font-size: 1rem;
   line-height: 1;
+
   transition: color 0.25s ease;
 }
 
 /* Icons */
 .nav-links a img {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   display: inline-block;
   vertical-align: middle;
+
   filter: brightness(0) saturate(100%) invert(70%);
   transition: filter 0.25s ease, transform 0.25s ease;
 }
@@ -62,22 +80,50 @@
 .nav-links a.active img {
   filter: brightness(0) saturate(100%) invert(60%)
           sepia(60%) saturate(600%) hue-rotate(125deg);
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 /* ===============================
-   RESPONSIVE NAVBAR
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 22px 40px;
+  }
+
+  .logo {
+    font-size: 1.45rem;
+  }
+
+  .nav-links {
+    gap: 26px;
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
 ================================ */
 
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    gap: 12px;
-    padding: 16px 20px;
+    gap: 14px;
+
+    /* ⬆ More touch-friendly spacing */
+    padding: 20px 24px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
   }
 }
