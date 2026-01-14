@@ -145,3 +145,8 @@
     border-radius: 16px;
   }
 }
+@media (max-width: 480px) {
+  .project-gallery {
+    grid-template-columns: 1fr; /* 🔒 force single column */
+  }
+}
