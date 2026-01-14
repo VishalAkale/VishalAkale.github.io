@@ -49,10 +49,10 @@
 .project-gallery {
   display: grid;
 
-  /* ✅ Better scaling across devices */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  /* 🔒 RESTORED: clear separation between images */
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 
-  gap: 48px;
+  gap: 56px; /* ⬆ slightly more breathing space */
   justify-items: center;
 }
 
